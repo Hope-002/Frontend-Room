@@ -1,0 +1,19 @@
+.top-fonts h1{
+    font-size: 35px;
+}
+
+
+img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.room-img{
+    width: 50vh;
+    height: 25vh;
+    object-fit: cover;
+}

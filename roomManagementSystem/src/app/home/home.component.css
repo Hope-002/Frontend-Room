@@ -1,0 +1,145 @@
+.colorBgTheme{
+    background-color: #3692cc;
+}
+
+.imgbg {
+    background-image:url('../../assets/bg.png');
+    min-height: 95vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.textBg{
+    margin-left:50%;
+    padding-top: 17%;
+}
+
+.textBg h3{
+    font-weight: bold;
+}
+
+.textBg h1{
+    font-weight: 600;
+}
+
+.section-title{
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: #3692cc;
+}
+
+.section-title::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: #3692cc;
+}
+
+.service-item{
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 45px rgba(0,0,0,0.08);
+    transition: 0.5s;
+    text-decoration: none
+}
+
+.service-item:hover{
+    background: #3692cc;
+    text-decoration: none;
+    transform: scale(0.95);
+}
+
+.service-item .service-icon{
+    margin: 0 auto 30px auto;
+    width: 65px;
+    height: 65px;
+    transition: 0.5s;
+}
+
+.service-item i,.service-item h5,.service-item p{
+    transition: 0.5s;
+}
+
+.service-item:hover i,.service-item:hover h5,.service-item:hover p{
+    transition: 0.5s;
+    color: white !important;
+}
+
+.location img{
+    height: 150px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.room-img{
+    width: 50vh;
+    height: 25vh;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 990px) {
+    .container-search-area {
+        margin-top: -10px;
+        border: 0.1px solid rgb(227, 227, 227);
+        margin: 0;
+        position:relative;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 750px) and (max-width: 950px) and (max-width: 850px)  and (max-width: 800px) { 
+    .textBg{
+    text-align: center;
+    margin: auto;
+    padding-top: 20%;
+}
+}
+
+@media (max-width: 600px) { 
+    .textBg{
+        text-align: center;
+        margin: auto;
+        padding-top: 40%;
+    } 
+}
+
+@media (max-width: 767.98px) { 
+    .border-sm-start-none { 
+        border-left: none !important; 
+    } 
+}
+
+

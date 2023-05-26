@@ -1,0 +1,288 @@
+<app-navbar></app-navbar>
+
+<section>
+  <div
+    class="container-xxl mt-lg-3 justify-content-center align-items-center pb-5"
+  >
+    <div class="row">
+      <div class="d-flex pb-1">
+        <div class="d-flex rounded mx-auto">
+          <div class="contact-box rounded">
+            <div class="text-center">
+              <h1 class="font-weight-bold mt-5">
+                ADD
+                <span
+                  class="colorTheme text-uppercase"
+                  style="font-weight: bolder"
+                  >NEW ROOM</span
+                >
+              </h1>
+              <P class="text-center">
+                Add New location of rooms with the below details
+              </P>
+              <div>
+                <div>
+                  <div class="panel-body">
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Room Id </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="roomId"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Room Id is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Room Name </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="roomName"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Room Name is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Room Type </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="roomType"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Room Type is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Cost </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="cost"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *cost is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Gender </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="gender"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Gender is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Location </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="location"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Location is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Offers </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="offers"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Offers is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Ratings </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="ratings"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Ratingsis required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Image </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="image"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Image is required
+                      </span>
+                    </div>
+
+                    <div
+                      class="form-group"
+                      style="padding: 2px"
+                      [class.has-error]="userNameControl.invalid"
+                    >
+                      <label class="control-label"> Phone Number </label>
+                      <input
+                        type="text"
+                        [(ngModel)]="phoneNumber"
+                        class="form-control"
+                        required
+                        #userNameControl="ngModel"
+                        minLength="1"
+                      />
+                      <span
+                        class="help-block"
+                        *ngIf="
+                          userNameControl.invalid && userNameControl.touched
+                        "
+                        [style]="{ color: 'red' }"
+                      >
+                        *Phone Number is required
+                      </span>
+                    </div>
+                  </div>
+
+                  <button (click)="AddRoom()">save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

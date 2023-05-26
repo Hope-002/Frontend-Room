@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+<mat-progress-bar mode="indeterminate" *ngIf="loader"></mat-progress-bar>
+
+<section>
+  <div class="text-center mt-5 top-fonts">
+    <h1 class="mb-2 font-weight-bold">
+      Find Best Deals in
+      <span
+        class="colorTheme text-uppercase"
+        style="font-weight: bolder !important"
+        >Rooms</span
+      >
+    </h1>
+    <p>Let our experts find the best rooms and deals for you!</p>
+  </div>
+
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-6 col-md-6 col-sm-6 mb-3 mb-lg-0 mx-auto">
+      <input
+        type="text"
+        class="form-control"
+        name="location"
+        [(ngModel)]="location"
+        (ngModelChange)="search()"
+        placeholder="Location"
+      />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="rooms-item container-fluid py-5">
+    <div class="row g-4 mx-auto w-75">
+      <div
+        class="col-lg-4 col-md-6 d-flex"
+        data-aos="zoom-in-down"
+        data-aos-duration="1000"
+        *ngFor="
+          let room of roomList | orderBy : 'ratings' : true;
+          let i = index
+        "
+      >
+        <div class="shadow rounded overflow-hidden">
+          <div class="position-relative">
+            <img src="{{ room.image }}" alt="" class="img-fluid room-img" />
+            <small
+              *ngIf="room.offers != 0"
+              class="position-absolute start-0 top-100 translate-middle-y bg-danger text-white rounded px-3 ms-4"
+            >
+              Offer upto {{ room.offers }}%
+            </small>
+          </div>
+          <div class="p-4 mt-2">
+            <div class="d-flex justify-content-between mb-3">
+              <h2 class="mb-0">{{ room.roomName }}</h2>
+              <div class="ps-2">
+                <ngb-rating
+                  [rate]="room.ratings"
+                  [readonly]="true"
+                  [max]="5"
+                  class="colorTheme"
+                ></ngb-rating>
+              </div>
+            </div>
+            <div class="d-flex mb-3">
+              <small class="border-end me-3 pe-3">
+                <i class="fas fa-hotel colorTheme me-2"></i>{{ room.roomType }}
+              </small>
+              <small class="border-end me-3 pe-3">
+                <i class="fa fa-users colorTheme me-2"></i>
+                {{ room.gender }} </small
+              ><small>
+                <i class="fas fa-rupee-sign colorTheme me-2"></i
+                >{{ room.cost }}</small
+              >
+            </div>
+            <p class="text-body mb-3">
+              <i class="fas fa-map-marker-alt colorTheme me-2"></i>
+              {{ room.location }}
+            </p>
+
+            <button
+              type="submit"
+              mat-raised-button
+              class="bookNow"
+              style="color: white; background-color: #3692cc"
+              (click)="goto(room.roomId)"
+            >
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="notFound">
+    <div class="alert alert-danger w-75 mx-auto" role="alert">
+      <i
+        class="fas fa-exclamation-triangle"
+        style="color: rgb(168, 12, 12)"
+      ></i>
+      OOPS! Location not found
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

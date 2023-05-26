@@ -1,0 +1,53 @@
+.colorBgTheme{
+    background-color: #3692cc;
+}
+
+.colorBgTheme a{
+    text-decoration: none;
+}
+
+.footer{
+    position: relative;
+    
+}
+
+.section-title{
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: #3692cc;
+}
+
+.footer .last a{
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: -10px;
+}
+
+ 
+.footer .last a:hover{
+    text-decoration: none;
+    color: #3692cc;
+}
+
+.footer .social-media .btn{
+ color: #3692cc;
+ border: 1px solid #3692cc;
+ margin-left: 5px;
+}
+
+.footer .social-media .btn:hover{
+    color: #fff;
+    background-color: #3692cc;
+    transform: scale(1.2);
+
+}
