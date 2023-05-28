@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RoomServiceService } from '../room-service.service';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-rooms',
   templateUrl: './add-rooms.component.html',
-  styleUrls: ['./add-rooms.component.css']
+  styleUrls: ['./add-rooms.component.css'],
 })
 export class AddRoomsComponent {
-
   roomList: any;
   id: any;
   loader: boolean = true;
@@ -28,7 +28,8 @@ export class AddRoomsComponent {
     private RoomService: RoomServiceService,
     private router: Router,
     private actRoute: ActivatedRoute,
-    private Http: HttpClient
+    private Http: HttpClient,
+    private toastr: ToastrService
   ) {
     this.roomList = [];
   }
@@ -72,6 +73,8 @@ export class AddRoomsComponent {
     this.RoomService.addNewRoom(addnewRoom).subscribe((res: any) => {
       console.log(res);
       this.getAllRooms();
+      // this.toastr.success('Added Successfully');
     });
+    // window.location.reload();
   }
 }
